@@ -1,0 +1,963 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta property="og:title" content="Bitmap" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://github.com/Embarcadero/reference/delphivcl.Bitmap.html" />
+<meta property="og:site_name" content="DelphiVCL | Documentation" />
+<meta property="og:description" content="Qualified name: delphivcl.Bitmap" />
+<meta property="og:image" content="https://github.com/Embarcadero/DelphiVCL4Python/blob/main/images/DelphiVCL4Python(256px).png" />
+<meta property="og:image:alt" content="DelphiVCL | Documentation" />
+<meta name="description" content="Qualified name: delphivcl.Bitmap" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Icon" href="delphivcl.Icon.html" /><link rel="prev" title="Graphic" href="delphivcl.Graphic.html" />
+
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>Bitmap - DelphiVCL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=93c9b8cc" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-content-foreground: #000000;
+  --color-background-primary: #ffffff;
+  --color-background-border: #ffffff;
+  --color-sidebar-background: #f8f9fb;
+  --color-brand-content: #1c00e3;
+  --color-brand-primary: #192bd0;
+  --color-link: #c93434;
+  --color-link--hover: #5b0000;
+  --color-inline-code-background: #f6f6f6;;
+  --color-foreground-secondary: #000;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-content-foreground: #ffffffd9;
+  --color-background-primary: #131416;
+  --color-background-border: #303335;
+  --color-sidebar-background: #1a1c1e;
+  --color-brand-content: #2196f3;
+  --color-brand-primary: #007fff;
+  --color-link: #51ba86;
+  --color-link--hover: #9cefc6;
+  --color-inline-code-background: #262626;
+  --color-foreground-secondary: #ffffffd9;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-content-foreground: #ffffffd9;
+  --color-background-primary: #131416;
+  --color-background-border: #303335;
+  --color-sidebar-background: #1a1c1e;
+  --color-brand-content: #2196f3;
+  --color-brand-primary: #007fff;
+  --color-link: #51ba86;
+  --color-link--hover: #9cefc6;
+  --color-inline-code-background: #262626;
+  --color-foreground-secondary: #ffffffd9;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">DelphiVCL Documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/DelphiVCL4Python-sidebar.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/DelphiVCL4Python-sidebar-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">DelphiVCL Documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials_guides.html">Tutorials &amp; Guides</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Tutorials &amp; Guides</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples.html">Example Gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../reference.html">Reference Manual</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Reference Manual</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../reference_index/delphivcl_classes.html">DelphiVCL</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of DelphiVCL</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Object.html">Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.StyleManager.html">StyleManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Stream.html">Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Monitor.html">Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomStyleServices.html">CustomStyleServices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Persistent.html">Persistent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Strings.html">Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Picture.html">Picture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Collection.html">Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Canvas.html">Canvas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Graphic.html">Graphic</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Bitmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Icon.html">Icon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Metafile.html">Metafile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Component.html">Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Timer.html">Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.OpenDialog.html">OpenDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.MenuItem.html">MenuItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Menu.html">Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.FileOpenDialog.html">FileOpenDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ContainedActionList.html">ContainedActionList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomBindingsList.html">CustomBindingsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BasicBindComponent.html">BasicBindComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BasicAction.html">BasicAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BaseBindScopeComponent.html">BaseBindScopeComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BaseLinkingBindSource.html">BaseLinkingBindSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ContainedAction.html">ContainedAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BindingsList.html">BindingsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BoundLabel.html">BoundLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomControl.html">CustomControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Label.html">Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.WinControl.html">WinControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomActionList.html">CustomActionList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.MainMenu.html">MainMenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.PopupMenu.html">PopupMenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.SaveDialog.html">SaveDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ActionList.html">ActionList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.MediaPlayer.html">MediaPlayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomToggleSwitch.html">CustomToggleSwitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomActivityIndicator.html">CustomActivityIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomAction.html">CustomAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Action.html">Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BaseObjectBindSource.html">BaseObjectBindSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomPrototypeBindSource.html">CustomPrototypeBindSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ActivityIndicator.html">ActivityIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ToggleSwitch.html">ToggleSwitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.PrototypeBindSource.html">PrototypeBindSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ContainedBindComponent.html">ContainedBindComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BindComponentDelegate.html">BindComponentDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.LinkPropertyToFieldDelegate.html">LinkPropertyToFieldDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.LinkControlDelegate.html">LinkControlDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomLinkPropertyToField.html">CustomLinkPropertyToField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.LinkControlToFieldDelegate.html">LinkControlToFieldDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.LinkPropertyToField.html">LinkPropertyToField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomLinkControlToField.html">CustomLinkControlToField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomLinkListControlToField.html">CustomLinkListControlToField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.LinkControlToField.html">LinkControlToField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.LinkListControlToField.html">LinkListControlToField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BitBtn.html">BitBtn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CheckBox.html">CheckBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ColorBox.html">ColorBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ComboBox.html">ComboBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ControlBar.html">ControlBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomGrid.html">CustomGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomEdit.html">CustomEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomForm.html">CustomForm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomStatusBar.html">CustomStatusBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomTabControl.html">CustomTabControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.DateTimePicker.html">DateTimePicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.GroupBox.html">GroupBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Header.html">Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.LabeledEdit.html">LabeledEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ListBox.html">ListBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Notebook.html">Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Page.html">Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.PageControl.html">PageControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Panel.html">Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.RadioButton.html">RadioButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.RadioGroup.html">RadioGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ScrollBar.html">ScrollBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.SpinButton.html">SpinButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.StaticText.html">StaticText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.TabSheet.html">TabSheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ToolBar.html">ToolBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.TrackBar.html">TrackBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomDrawGrid.html">CustomDrawGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomMemo.html">CustomMemo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomNumberBox.html">CustomNumberBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Edit.html">Edit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.SpinEdit.html">SpinEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Form.html">Form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.StatusBar.html">StatusBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.TabControl.html">TabControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.DrawGrid.html">DrawGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.Memo.html">Memo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.NumberBox.html">NumberBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.StringGrid.html">StringGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.CustomMemoryStream.html">CustomMemoryStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.HandleStream.html">HandleStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.MemoryStream.html">MemoryStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.ResourceStream.html">ResourceStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.FileStream.html">FileStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BytesStream.html">BytesStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.BufferedFileStream.html">BufferedFileStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delphivcl.StringStream.html">StringStream</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../changelog.html">Changelog</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Changelog</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog/0.1.40-changelog.html">v0.1.40</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog/1.0.0-changelog.html">v1.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog/1.0.1-changelog.html">v1.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog/1.0.2-changelog.html">v1.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog/1.0.3-changelog.html">v1.0.3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="bitmap">
+<h1>Bitmap<a class="headerlink" href="#bitmap" title="Link to this heading">#</a></h1>
+<p>Qualified name: <code class="docutils literal notranslate"><span class="pre">delphivcl.Bitmap</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="delphivcl.Bitmap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Bitmap</span></span><a class="headerlink" href="#delphivcl.Bitmap" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="delphivcl.Graphic.html#delphivcl.Graphic" title="delphivcl.Graphic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Graphic</span></code></a></p>
+<p>TBitmap is an encapsulation of a Windows bitmap (HBITMAP), including its palette (HPALETTE).
+A bitmap is a powerful graphics object used to create, manipulate and store images in memory and as files on a disk.
+TBitmap contains an internal image of the bitmap graphic and automatically manages realization of the palette when drawn.
+To draw a bitmap on a canvas, call the Draw or StretchDraw methods of a TCanvas object, passing a TBitmap as a parameter.
+Creating copies of a TBitmap is very fast since the handle is copied rather than the image. If the image is modified and the handle is shared by more than one TBitmap object, the image is copied before the modification is performed (that is, copy on write).</p>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.Assign" title="delphivcl.Bitmap.Assign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Assign</span></code></a></p></td>
+<td><p>Copies a new bitmap image to the bitmap object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.CanLoadFromStream" title="delphivcl.Bitmap.CanLoadFromStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CanLoadFromStream</span></code></a></p></td>
+<td><p>Vcl.Graphics.TBitmap.CanLoadFromStream inherits from Vcl.Graphics.TGraphic.CanLoadFromStream.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.Create" title="delphivcl.Bitmap.Create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Create</span></code></a></p></td>
+<td><p>Instantiates a bitmap object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.Destroy" title="delphivcl.Bitmap.Destroy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Destroy</span></code></a></p></td>
+<td><p>Disposes of the instance of the bitmap object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.Dormant" title="delphivcl.Bitmap.Dormant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Dormant</span></code></a></p></td>
+<td><p>Creates a memory bitmap image in order to release the bitmap handle, forcing the image into DIB format to save resources.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.FreeImage" title="delphivcl.Bitmap.FreeImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FreeImage</span></code></a></p></td>
+<td><p>Frees the cached file image stored in memory by the bitmap.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.HandleAllocated" title="delphivcl.Bitmap.HandleAllocated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HandleAllocated</span></code></a></p></td>
+<td><p>Indicates whether the TBitmap object has acquired a handle to the underlying GDI object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.LoadFromClipboardFormat" title="delphivcl.Bitmap.LoadFromClipboardFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadFromClipboardFormat</span></code></a></p></td>
+<td><p>Loads a bitmap from the Clipboard into the bitmap object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.LoadFromResourceID" title="delphivcl.Bitmap.LoadFromResourceID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadFromResourceID</span></code></a></p></td>
+<td><p>Loads a bitmap from a resource into the bitmap object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.LoadFromResourceName" title="delphivcl.Bitmap.LoadFromResourceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadFromResourceName</span></code></a></p></td>
+<td><p>Loads a bitmap resource into the bitmap object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.LoadFromStream" title="delphivcl.Bitmap.LoadFromStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadFromStream</span></code></a></p></td>
+<td><p>Loads the bitmap from a stream into the bitmap object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.Mask" title="delphivcl.Bitmap.Mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mask</span></code></a></p></td>
+<td><p>Converts the current bitmap image into a monochrome mask, replacing TransparentColor with white and every other color with black.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.ReleaseHandle" title="delphivcl.Bitmap.ReleaseHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReleaseHandle</span></code></a></p></td>
+<td><p>Returns the handle to the bitmap so that the TBitmap object no longer knows about the handle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.ReleaseMaskHandle" title="delphivcl.Bitmap.ReleaseMaskHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReleaseMaskHandle</span></code></a></p></td>
+<td><p>Returns the handle to the bitmap's mask so that the TBitmap object no longer knows about the mask handle.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.ReleasePalette" title="delphivcl.Bitmap.ReleasePalette"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReleasePalette</span></code></a></p></td>
+<td><p>Returns the handle to the bitmap's palette and disassociates the palette from the TBitmap object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.SaveToClipboardFormat" title="delphivcl.Bitmap.SaveToClipboardFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveToClipboardFormat</span></code></a></p></td>
+<td><p>Creates a local copy of the bitmap in Clipboard format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.SaveToStream" title="delphivcl.Bitmap.SaveToStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveToStream</span></code></a></p></td>
+<td><p>Saves the bitmap to a stream.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.SetSize" title="delphivcl.Bitmap.SetSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetSize</span></code></a></p></td>
+<td><p>Specifies the size of the bitmap.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Attributes</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.AlphaFormat" title="delphivcl.Bitmap.AlphaFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AlphaFormat</span></code></a></p></td>
+<td><p>Indicates how reserved byte of each pixel is used in 32 bit bitmaps.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.Canvas" title="delphivcl.Bitmap.Canvas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Canvas</span></code></a></p></td>
+<td><p>Provides access to a drawing surface that represents the bitmap.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClassName</span></code></p></td>
+<td><p>Returns the TObject.ClassName</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Empty</span></code></p></td>
+<td><p>Indicates whether the graphics object contains a graphic.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.Handle" title="delphivcl.Bitmap.Handle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Handle</span></code></a></p></td>
+<td><p>Provides access to the Windows GDI bitmap handle for accessing the GDI bitmap object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.HandleType" title="delphivcl.Bitmap.HandleType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HandleType</span></code></a></p></td>
+<td><p>Indicates whether the bitmap is a device-dependent bitmap, or a device-independent bitmap.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Height</span></code></p></td>
+<td><p>Specifies the vertical size of the graphic in pixels.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.IgnorePalette" title="delphivcl.Bitmap.IgnorePalette"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IgnorePalette</span></code></a></p></td>
+<td><p>Determines whether the bitmap realizes its palette when drawing its image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.MaskHandle" title="delphivcl.Bitmap.MaskHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskHandle</span></code></a></p></td>
+<td><p>Provides access to the Windows GDI bitmap handle for accessing the GDI bitmap object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Modified</span></code></p></td>
+<td><p>Indicates whether the graphics object has been changed or edited.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.Monochrome" title="delphivcl.Bitmap.Monochrome"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Monochrome</span></code></a></p></td>
+<td><p>Determines whether the bitmap displays its image in monochrome.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">OnChange</span></code></p></td>
+<td><p>&lt;Delphi property OnChange of type TGraphic at 21141225010&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">OnProgress</span></code></p></td>
+<td><p>&lt;Delphi property OnProgress of type TGraphic at 211412250E0&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Palette</span></code></p></td>
+<td><p>Indicates the color palette of the graphical image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaletteModified</span></code></p></td>
+<td><p>Indicates whether the palette has changed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.PixelFormat" title="delphivcl.Bitmap.PixelFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PixelFormat</span></code></a></p></td>
+<td><p>Indicates the bit format of the bitmap image, specifying how the image is displayed and how the pixels of the bitmap image are stored in memory.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScaledDrawer</span></code></p></td>
+<td><p>Returns the reference to the scaled drawer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.ScanLine" title="delphivcl.Bitmap.ScanLine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScanLine</span></code></a></p></td>
+<td><p>&lt;Delphi indexed property ScanLine of type TBitmap at 211416EE9A0&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">SupportsPartialTransparency</span></code></p></td>
+<td><p>Indicate whether graphic supports partial transparency or an alpha channel.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transparent</span></code></p></td>
+<td><p>Indicates whether the image covers its rectangular area.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#delphivcl.Bitmap.TransparentColor" title="delphivcl.Bitmap.TransparentColor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransparentColor</span></code></a></p></td>
+<td><p>Determines which color of the bitmap is to be transparent when the bitmap is drawn.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#delphivcl.Bitmap.TransparentMode" title="delphivcl.Bitmap.TransparentMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransparentMode</span></code></a></p></td>
+<td><p>Determines whether the TransparentColor property's value is automatically calculated or stored with the bitmap object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Width</span></code></p></td>
+<td><p>Determines the maximum width of the graphics object in pixels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.AlphaFormat">
+<span class="sig-name descname"><span class="pre">AlphaFormat</span></span><a class="headerlink" href="#delphivcl.Bitmap.AlphaFormat" title="Link to this definition">#</a></dt>
+<dd><p>Indicates how reserved byte of each pixel is used in 32 bit bitmaps.
+Use AlphaFormat to change the way a TBitmap uses the reserved byte of each pixel in a 32bit Bitmap.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.Assign">
+<span class="sig-name descname"><span class="pre">Assign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="delphivcl.Persistent.html#delphivcl.Persistent" title="delphivcl.Persistent"><span class="pre">Persistent</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.Assign" title="Link to this definition">#</a></dt>
+<dd><p>Copies a new bitmap image to the bitmap object.
+Assign copies the bitmap image contained in Source to the bitmap object. If Source is not a bitmap, Assign calls the inherited Assign method, which can copy an image from any class that knows how to copy to a TBitmap object. If the bitmap needs to be changed, the actual bitmap image is copied before the changes are made (copy on write).</p>
+<p>Note:  An object of one type can always be assigned to another object of the same type. Also, the Source can be of type TPicture if the Graphic property of the picture is a bitmap.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.CanLoadFromStream">
+<span class="sig-name descname"><span class="pre">CanLoadFromStream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Stream</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="delphivcl.Stream.html#delphivcl.Stream" title="delphivcl.Stream"><span class="pre">Stream</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Boolean</span></span></span><a class="headerlink" href="#delphivcl.Bitmap.CanLoadFromStream" title="Link to this definition">#</a></dt>
+<dd><p>Vcl.Graphics.TBitmap.CanLoadFromStream inherits from Vcl.Graphics.TGraphic.CanLoadFromStream. All content below this line refers to Vcl.Graphics.TGraphic.CanLoadFromStream.
+CanLoadFromStream returns True when a specified stream contains a streamed image of a specific TGraphic subclass.
+The method uses current stream position, it does not change current stream position.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.Canvas">
+<span class="sig-name descname"><span class="pre">Canvas</span></span><a class="headerlink" href="#delphivcl.Bitmap.Canvas" title="Link to this definition">#</a></dt>
+<dd><p>Provides access to a drawing surface that represents the bitmap.
+Canvas allows drawing on the bitmap by providing a T Canvas object for this purpose. Drawing on the canvas effectively modifies the underlying bitmap image pixels. Any canvas operation is valid on a bitmap (not just Draw and StretchDraw) including line drawing, rectangles, and circles. The bitmap object is passed as a parameter to these methods.
+A canvas object is created automatically for the bitmap and the property is read-only.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.Create">
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.Create" title="Link to this definition">#</a></dt>
+<dd><p>Instantiates a bitmap object.
+Call Create to instantiate a bitmap object at runtime. Create is also called automatically when a bitmap image is loaded into a TImage.
+Create allocates memory for a bitmap object, and calls the inherited Create. Then it creates a TBitmapImage as the internal image that represents the bitmap.
+Instantiates a bitmap object.
+Call Create to instantiate a bitmap object at runtime. Create is also called automatically when a bitmap image is loaded into a TImage.
+Create allocates memory for a bitmap object, and calls the inherited Create. Then it creates a TBitmapImage as the internal image that represents the bitmap.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.Destroy">
+<span class="sig-name descname"><span class="pre">Destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.Destroy" title="Link to this definition">#</a></dt>
+<dd><p>Disposes of the instance of the bitmap object.
+Destroy is the destructor for a TBitmap object.
+Do not call the destructor directly in an application. Instead, call Free. Free verifies that the bitmap object is not nil before it calls Destroy.
+Destroy releases the internal bitmap image (TBitmapImage object) and frees the canvas before calling the inherited destructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.Dormant">
+<span class="sig-name descname"><span class="pre">Dormant</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.Dormant" title="Link to this definition">#</a></dt>
+<dd><p>Creates a memory bitmap image in order to release the bitmap handle, forcing the image into DIB format to save resources.
+Use Dormant to change the format of the bitmap in memory thereby reducing the amount of GDI resources used by the application.
+Dormant creates a bitmap image in memory using a memory stream object. This preserves the image so that the bitmap can then free the HBITMAP (accessed through the Handle property) that was assigned to it.
+DIB handles may use fewer Win95 GDI resources than DDB, but DIBs may also use more memory than DDBs, depending on the current video driver and mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.FreeImage">
+<span class="sig-name descname"><span class="pre">FreeImage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.FreeImage" title="Link to this definition">#</a></dt>
+<dd><p>Frees the cached file image stored in memory by the bitmap.
+Use FreeImage to reduce the memory requirements of an application when color depth and pixel format are not an issue. Freeing the image releases the memory allocated for the bitmap image when it was originally loaded to disk. Consequently, some of the original pixel format of the bitmap is lost (for example, if you changed its format to a DIB) as well as the color depth of the bitmap.
+When a bitmap is loaded into a bitmap object, the bitmap object creates an image of the loaded bitmap in memory. If the bitmap isn’t changed, the memory image is used when saving the bitmap, to verify that the bitmap has not lost color depth or changed the pixel format.</p>
+<p>Code Examples
+LoadFromFile (Delphi)
+LoadFromFile (C++)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.Handle">
+<span class="sig-name descname"><span class="pre">Handle</span></span><a class="headerlink" href="#delphivcl.Bitmap.Handle" title="Link to this definition">#</a></dt>
+<dd><p>Provides access to the Windows GDI bitmap handle for accessing the GDI bitmap object.
+Use Handle to call a Windows API function that requires the handle of a bitmap object (HBITMAP). Pass Handle as the bitmap handle parameter to these functions.
+Handle is the HBITMAP encapsulated by the bitmap object. Avoid grabbing the handle directly since it causes the HBITMAP to be copied if more than one TBitmap shares the handle.</p>
+<p>Warning:  Be careful when giving the handle to an object or routine. If the receiver takes ownership (and destroys) the bitmap handle, call ReleaseHandle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.HandleAllocated">
+<span class="sig-name descname"><span class="pre">HandleAllocated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.HandleAllocated" title="Link to this definition">#</a></dt>
+<dd><p>Indicates whether the TBitmap object has acquired a handle to the underlying GDI object.
+Use HandleAllocated to determine whether the Handle property is set to an HBITMAP value. HandleAllocated indicates whether the underlying GDI object has already been created. Use HandleAllocated rather than reading the Handle property. When an application reads the Handle property, it automatically creates a bitmap and returns its handle if the underlying GDI object does not already exist.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.HandleType">
+<span class="sig-name descname"><span class="pre">HandleType</span></span><a class="headerlink" href="#delphivcl.Bitmap.HandleType" title="Link to this definition">#</a></dt>
+<dd><p>Indicates whether the bitmap is a device-dependent bitmap, or a device-independent bitmap.
+HandleType is used to find or modify the type of the bitmap. Device-dependent bitmaps (DDBs) may be faster to draw on the screen, but may be stored in memory in a device-specific format. Device-independent bitmaps (DIBs) are stored in memory in a standard format supported by all devices (including printers).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.IgnorePalette">
+<span class="sig-name descname"><span class="pre">IgnorePalette</span></span><a class="headerlink" href="#delphivcl.Bitmap.IgnorePalette" title="Link to this definition">#</a></dt>
+<dd><p>Determines whether the bitmap realizes its palette when drawing its image.
+Use IgnorePalette when speed of drawing is a priority. When IgnorePalette is true, the bitmap does not realize its palette when drawing itself, resulting in lower picture quality on 256-color video drivers, but faster drawing of the bitmap image.</p>
+<p>Note:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.LoadFromClipboardFormat">
+<span class="sig-name descname"><span class="pre">LoadFromClipboardFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AFormat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AData</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NativeUInt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">APalette</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HPALETE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.LoadFromClipboardFormat" title="Link to this definition">#</a></dt>
+<dd><p>Loads a bitmap from the Clipboard into the bitmap object.
+LoadFromClipboardFormat is called if the bitmap is registered with the TPicture object using the RegisterClipboardFormat method.
+LoadFromClipboardFormat replaces the current image with the data pointed to by the AData parameter. The palette for the bitmap is specified by the APalette parameter.
+The following code snippet shows how to load a bitmap from the clipboard and use that picture to draw on the canvas of the form.</p>
+<p>Note: To load a bitmap into the clipboard, you can use the code snippet for the SaveToClipboardFormat method.</p>
+<p>Delphi:</p>
+<dl class="simple">
+<dt>uses</dt><dd><p>Vcl.Clipbrd;</p>
+</dd>
+</dl>
+<p>procedure TForm1.Button1Click(Sender: TObject);
+var</p>
+<blockquote>
+<div><p>Bitmap : TBitmap;</p>
+</div></blockquote>
+<dl>
+<dt>begin</dt><dd><p>Bitmap := TBitMap.Create;
+try</p>
+<blockquote>
+<div><p>Bitmap.LoadFromClipBoardFormat(cf_BitMap, ClipBoard.GetAsHandle(cf_Bitmap), 0);
+Canvas.draw(0,0,Bitmap);</p>
+</div></blockquote>
+<dl class="simple">
+<dt>finally</dt><dd><p>Bitmap.Free;
+Clipboard.Clear;</p>
+</dd>
+</dl>
+<p>end;</p>
+</dd>
+</dl>
+<p>end;</p>
+<p>C++:</p>
+<p>#include &lt;Vcl.Clipbrd.hpp&gt;</p>
+<dl>
+<dt>void __fastcall TForm1::Button1Click(TObject <a href="#id1"><span class="problematic" id="id2">*</span></a>Sender){</dt><dd><p>TBitmap* Bitmap;
+TClipboard* cb = Clipboard();</p>
+<p>Bitmap = new TBitmap();
+try{</p>
+<blockquote>
+<div><p>Bitmap-&gt;LoadFromClipboardFormat(CF_BITMAP, cb-&gt;GetAsHandle(CF_BITMAP), 0);
+Canvas-&gt;Draw(0,0,Bitmap);</p>
+</div></blockquote>
+<p>}
+__finally{</p>
+<blockquote>
+<div><p>delete Bitmap;
+cb-&gt;Clear();</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.LoadFromResourceID">
+<span class="sig-name descname"><span class="pre">LoadFromResourceID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NativeUInt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ResID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Integer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.LoadFromResourceID" title="Link to this definition">#</a></dt>
+<dd><p>Loads a bitmap from a resource into the bitmap object.
+Use LoadFromResourceID to load a specified bitmap resource along with palette information from a module’s executable file.
+Instance is the handle of the module that contains the resource.
+ResID is the resource ID for the bitmap.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.LoadFromResourceName">
+<span class="sig-name descname"><span class="pre">LoadFromResourceName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NativeUInt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ResName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.LoadFromResourceName" title="Link to this definition">#</a></dt>
+<dd><p>Loads a bitmap resource into the bitmap object.
+LoadFromResourceName loads the specified bitmap resource along with palette information from a module’s executable file.
+Instance is the handle of the module that contains the resource.
+ResName is the name of the resource to load.</p>
+<p>Note:  Use this routine to load bitmaps from RES files instead of the LoadBitmap API. LoadBitmap does not support 256-color images.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.LoadFromStream">
+<span class="sig-name descname"><span class="pre">LoadFromStream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Stream</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="delphivcl.Stream.html#delphivcl.Stream" title="delphivcl.Stream"><span class="pre">Stream</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.LoadFromStream" title="Link to this definition">#</a></dt>
+<dd><p>Loads the bitmap from a stream into the bitmap object.
+Use LoadFromStream to load the bitmap image from a stream. The Stream parameter specifies the stream from which to read the bitmap image. For example, use LoadFromStream to load a bitmap image from a BLOB stream that reads from a graphic field in a dataset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.Mask">
+<span class="sig-name descname"><span class="pre">Mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TransparentColor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.Mask" title="Link to this definition">#</a></dt>
+<dd><p>Converts the current bitmap image into a monochrome mask, replacing TransparentColor with white and every other color with black.
+Use Mask to produce a monochrome mask bitmap based on a given transparent color. Mask produces the same image that MaskHandle does, except that the resulting mask image replaces the image in the TBitmap object, so it only makes sense to call Mask once. Use MaskHandle when only a bitmap handle of the mask image is needed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.MaskHandle">
+<span class="sig-name descname"><span class="pre">MaskHandle</span></span><a class="headerlink" href="#delphivcl.Bitmap.MaskHandle" title="Link to this definition">#</a></dt>
+<dd><p>Provides access to the Windows GDI bitmap handle for accessing the GDI bitmap object.
+Use MaskHandle to call a Windows API function that requires the handle of a bitmap object. Pass MaskHandle as the bitmap handle parameter to these functions. MaskHandle is the HBITMAP encapsulated by the bitmap object’s mask.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.Monochrome">
+<span class="sig-name descname"><span class="pre">Monochrome</span></span><a class="headerlink" href="#delphivcl.Bitmap.Monochrome" title="Link to this definition">#</a></dt>
+<dd><p>Determines whether the bitmap displays its image in monochrome.
+If Monochrome is true if the bitmap displays as a monochrome bitmap. Monochrome is false if the bitmap displays in color, that is, if it contains more than one bit per pixel.</p>
+<p>Note:
+Code Examples
+LoadFromFile (Delphi)
+LoadFromFile (C++)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.PixelFormat">
+<span class="sig-name descname"><span class="pre">PixelFormat</span></span><a class="headerlink" href="#delphivcl.Bitmap.PixelFormat" title="Link to this definition">#</a></dt>
+<dd><p>Indicates the bit format of the bitmap image, specifying how the image is displayed and how the pixels of the bitmap image are stored in memory.
+Use PixelFormat to change a TBitmap’s internal image to a particular memory format and color depth, or to find out what memory format and color depth a TBitmap is using. The possible formats are specified in TPixelFormat.
+For example, PixelFormat can be used to set the pixel format of the bitmap image to 8-bit for video drivers that cannot display the native format of a bitmap image.</p>
+<p>Note: The PixelFormat of a JPEG image object applies to the bitmap if the JPEG image is copied to it.
+Changing the pixel format is most commonly used with ScanLine, because your code must decode the pixel data accessed by ScanLine. Image-editing tools usually use one pixel for all internal image operations and copy the results to the screen (in whatever format) as the last step.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.ReleaseHandle">
+<span class="sig-name descname"><span class="pre">ReleaseHandle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.ReleaseHandle" title="Link to this definition">#</a></dt>
+<dd><p>Returns the handle to the bitmap so that the TBitmap object no longer knows about the handle.
+Use ReleaseHandle to disassociate the bitmap from the bitmap handle. Use it when you need to give a bitmap handle to a routine or object that will assume ownership (or destroy) the bitmap handle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.ReleaseMaskHandle">
+<span class="sig-name descname"><span class="pre">ReleaseMaskHandle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.ReleaseMaskHandle" title="Link to this definition">#</a></dt>
+<dd><p>Returns the handle to the bitmap’s mask so that the TBitmap object no longer knows about the mask handle.
+Use ReleaseMaskHandle to disassociate the bitmap object from the bitmap mask handle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.ReleasePalette">
+<span class="sig-name descname"><span class="pre">ReleasePalette</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.ReleasePalette" title="Link to this definition">#</a></dt>
+<dd><p>Returns the handle to the bitmap’s palette and disassociates the palette from the TBitmap object.
+Use ReleasePalette to disassociate the palette from the bitmap image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.SaveToClipboardFormat">
+<span class="sig-name descname"><span class="pre">SaveToClipboardFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Word</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NativeUInt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">APalette</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HPALETE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.SaveToClipboardFormat" title="Link to this definition">#</a></dt>
+<dd><p>Creates a local copy of the bitmap in Clipboard format.
+Use SaveToClipboardFormat to copy the bitmap to a Clipboard format. The bitmap’s palette is returned in the APalette parameter, the format in the AFormat parameter, and a handle to the data in the AData parameter. Before the bitmap can be saved, an application must have registered the format with the TBitmap object using the RegisterClipboardFormat method.
+The following code snippet shows how to save a bitmap to the clipboard.</p>
+<p>Note: To load a bitmap from the clipboard, you can use the code snippet for the LoadFromClipboardFormat method.</p>
+<p>Delphi:</p>
+<dl class="simple">
+<dt>uses</dt><dd><p>Vcl.Clipbrd;</p>
+</dd>
+</dl>
+<p>procedure TForm1.Button1Click(Sender: TObject);
+var</p>
+<blockquote>
+<div><p>MyFormat : Word;
+Bitmap : TBitMap;
+AData : THandle;
+APalette : HPALETTE;</p>
+</div></blockquote>
+<dl>
+<dt>begin</dt><dd><p>Bitmap := TBitmap.Create;
+try</p>
+<blockquote>
+<div><p>Bitmap.LoadFromFile(‘C:UsersPublicPicturesSample Picturesdesert.bmp’);
+Bitmap.SaveToClipBoardFormat(MyFormat, AData, APalette);
+ClipBoard.SetAsHandle(MyFormat,AData);</p>
+</div></blockquote>
+<dl class="simple">
+<dt>finally</dt><dd><p>Bitmap.Free;</p>
+</dd>
+</dl>
+<p>end;</p>
+</dd>
+</dl>
+<p>end;</p>
+<p>C++:</p>
+<p>#include &lt;Vcl.Clipbrd.hpp&gt;</p>
+<dl>
+<dt>void __fastcall TForm1::Button1Click(TObject <a href="#id3"><span class="problematic" id="id4">*</span></a>Sender){</dt><dd><p>TClipboard* cb = Clipboard();
+unsigned short MyFormat;
+TBitmap* Bitmap;
+unsigned int AData;
+HPALETTE APalette;</p>
+<p>Bitmap = new TBitmap();
+try{</p>
+<blockquote>
+<div><p>Bitmap-&gt;LoadFromFile(“C:\Users\Public\Pictures\Sample Pictures\desert.bmp”);
+Bitmap-&gt;SaveToClipboardFormat(MyFormat, AData, APalette);
+cb-&gt;SetAsHandle(MyFormat, AData);</p>
+</div></blockquote>
+<p>}
+__finally{</p>
+<blockquote>
+<div><p>delete Bitmap;</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>}</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.SaveToStream">
+<span class="sig-name descname"><span class="pre">SaveToStream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Stream</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="delphivcl.Stream.html#delphivcl.Stream" title="delphivcl.Stream"><span class="pre">Stream</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.SaveToStream" title="Link to this definition">#</a></dt>
+<dd><p>Saves the bitmap to a stream.
+Use SaveToStream to write the bitmap image to the stream specified by the Stream parameter. For example, specify a TBlobStream object as the Stream parameter to save the bitmap image to a graphic field in a dataset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.ScanLine">
+<span class="sig-name descname"><span class="pre">ScanLine</span></span><a class="headerlink" href="#delphivcl.Bitmap.ScanLine" title="Link to this definition">#</a></dt>
+<dd><p>&lt;Delphi indexed property ScanLine of type TBitmap at 211416EE9A0&gt;</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.SetSize">
+<span class="sig-name descname"><span class="pre">SetSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AWidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Integer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AHeight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Integer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delphivcl.Bitmap.SetSize" title="Link to this definition">#</a></dt>
+<dd><p>Specifies the size of the bitmap.
+Use the SetSize method to set both the height and width of the bitmap. This results in better performance than setting the height and width separately.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.TransparentColor">
+<span class="sig-name descname"><span class="pre">TransparentColor</span></span><a class="headerlink" href="#delphivcl.Bitmap.TransparentColor" title="Link to this definition">#</a></dt>
+<dd><p>Determines which color of the bitmap is to be transparent when the bitmap is drawn.
+Use TransparentColor to determine how to draw the bitmap transparently. When the TransparentMode property is set to tmAuto (default), TransparentColor returns the color of the first pixel in the bitmap image data. For “bottom-up” bitmaps, the first pixel is the bottom leftmost pixel shown onscreen. For “top-down” bitmaps (less common), the first pixel is in the top left corner shown onscreen.
+If TransparentColor is assigned, the TransparentMode is automatically set to tmFixed so that the new transparent color can be used later. If you want TransparentColor to disregard any assignments and return the bottom leftmost pixel color again, set TransparentMode to tmAuto.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="delphivcl.Bitmap.TransparentMode">
+<span class="sig-name descname"><span class="pre">TransparentMode</span></span><a class="headerlink" href="#delphivcl.Bitmap.TransparentMode" title="Link to this definition">#</a></dt>
+<dd><p>Determines whether the TransparentColor property’s value is automatically calculated or stored with the bitmap object.
+When TransparentMode is set to tmAuto (the default), the TransparentColor property returns the color of the bottom-leftmost pixel of the bitmap image. When TransparentMode is set to tmFixed, the TransparentColor property refers to the color stored in the bitmap object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="delphivcl.Icon.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Icon</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="delphivcl.Graphic.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Graphic</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2020-2023, Embarcadero Python Dev Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Bitmap</a><ul>
+<li><a class="reference internal" href="#delphivcl.Bitmap"><code class="docutils literal notranslate"><span class="pre">Bitmap</span></code></a><ul>
+<li><a class="reference internal" href="#delphivcl.Bitmap.AlphaFormat"><code class="docutils literal notranslate"><span class="pre">Bitmap.AlphaFormat</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.Assign"><code class="docutils literal notranslate"><span class="pre">Bitmap.Assign()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.CanLoadFromStream"><code class="docutils literal notranslate"><span class="pre">Bitmap.CanLoadFromStream()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.Canvas"><code class="docutils literal notranslate"><span class="pre">Bitmap.Canvas</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.Create"><code class="docutils literal notranslate"><span class="pre">Bitmap.Create()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.Destroy"><code class="docutils literal notranslate"><span class="pre">Bitmap.Destroy()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.Dormant"><code class="docutils literal notranslate"><span class="pre">Bitmap.Dormant()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.FreeImage"><code class="docutils literal notranslate"><span class="pre">Bitmap.FreeImage()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.Handle"><code class="docutils literal notranslate"><span class="pre">Bitmap.Handle</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.HandleAllocated"><code class="docutils literal notranslate"><span class="pre">Bitmap.HandleAllocated()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.HandleType"><code class="docutils literal notranslate"><span class="pre">Bitmap.HandleType</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.IgnorePalette"><code class="docutils literal notranslate"><span class="pre">Bitmap.IgnorePalette</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.LoadFromClipboardFormat"><code class="docutils literal notranslate"><span class="pre">Bitmap.LoadFromClipboardFormat()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.LoadFromResourceID"><code class="docutils literal notranslate"><span class="pre">Bitmap.LoadFromResourceID()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.LoadFromResourceName"><code class="docutils literal notranslate"><span class="pre">Bitmap.LoadFromResourceName()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.LoadFromStream"><code class="docutils literal notranslate"><span class="pre">Bitmap.LoadFromStream()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.Mask"><code class="docutils literal notranslate"><span class="pre">Bitmap.Mask()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.MaskHandle"><code class="docutils literal notranslate"><span class="pre">Bitmap.MaskHandle</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.Monochrome"><code class="docutils literal notranslate"><span class="pre">Bitmap.Monochrome</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.PixelFormat"><code class="docutils literal notranslate"><span class="pre">Bitmap.PixelFormat</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.ReleaseHandle"><code class="docutils literal notranslate"><span class="pre">Bitmap.ReleaseHandle()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.ReleaseMaskHandle"><code class="docutils literal notranslate"><span class="pre">Bitmap.ReleaseMaskHandle()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.ReleasePalette"><code class="docutils literal notranslate"><span class="pre">Bitmap.ReleasePalette()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.SaveToClipboardFormat"><code class="docutils literal notranslate"><span class="pre">Bitmap.SaveToClipboardFormat()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.SaveToStream"><code class="docutils literal notranslate"><span class="pre">Bitmap.SaveToStream()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.ScanLine"><code class="docutils literal notranslate"><span class="pre">Bitmap.ScanLine</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.SetSize"><code class="docutils literal notranslate"><span class="pre">Bitmap.SetSize()</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.TransparentColor"><code class="docutils literal notranslate"><span class="pre">Bitmap.TransparentColor</span></code></a></li>
+<li><a class="reference internal" href="#delphivcl.Bitmap.TransparentMode"><code class="docutils literal notranslate"><span class="pre">Bitmap.TransparentMode</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/responsiveSvg.js?v=f1528c9d"></script>
+    </body>
+</html>
